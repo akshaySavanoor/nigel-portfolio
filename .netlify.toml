@@ -1,2 +1,8 @@
 [build]
-  publish = "C:/Users/Nigel Peris/OneDrive/Desktop/nigel portfolio"
+  command = "npm start"  # Use the appropriate build command
+  publish = "nigel-portfolio/public"  # Specify the path to the directory containing your static files
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
