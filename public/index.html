@@ -1,0 +1,96 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nigel Peris - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>
+        <span class="yellow-letter">N</span>igel.
+      </h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+        <div class="home-container">
+          <h2>UI/UX Designer</h2>
+          <h1>Hi, I'm Nigel Peris</h1>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <img src="path/to/your/profile-picture.jpg" alt="Profile Picture">
+            <div class="text-content">
+              <h3>Nigel Peris</h3>
+              <p>
+                An energetic, inquisitive, and self-motivated Software Engineer based in Mangalore. I have a strong passion for building innovative and user-friendly web applications.
+              </p>
+              <p>
+                With a background in Computer Science and experience in HTML, CSS, JavaScript, Python, and more, I enjoy solving complex problems and creating efficient and scalable solutions. I constantly stay up-to-date with the latest industry trends and technologies to deliver high-quality and impactful projects.
+              </p>
+              <p>
+                Apart from coding, I have a keen interest in playing chess and exploring different genres of music. These activities help me unwind and foster creativity in my work.
+              </p>
+              <p>
+                I am always open to new challenges and opportunities to collaborate on exciting projects. Feel free to reach out to me to discuss any potential collaborations or to learn more about my work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <!-- Dynamically loaded project elements will be appended here -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" action="/contact" method="POST">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div>
+          <button type="submit">Send Message</button>
+        </div>
+        <div class="error-message"></div>
+      </form>
+    </section>
+    <footer>
+        <div class="container">
+          <p>&copy; 2023 Nigel Peris. All rights reserved.</p>
+        </div>
+      </footer>
+  </main>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

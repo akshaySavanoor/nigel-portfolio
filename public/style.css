@@ -1,0 +1,215 @@
+/* style.css */
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+}
+body {
+  background: linear-gradient(to bottom, #ff00cc, #3333ff);
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.yellow-letter {
+  color: yellow;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #ff9800;
+}
+
+nav ul li a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff9800;
+  bottom: -5px;
+  left: 0;
+}
+
+/* Projects section styling */
+#projects .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the projects in the container */
+}
+
+.project {
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fills the square box */
+  margin-bottom: 10px;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+
+.project:hover .project-info {
+  transform: translateY(0%);
+}
+
+/* Home section styling */
+#home {
+  text-align: left;
+  padding: 100px;
+}
+
+.home-container h2,
+.home-container h1 {
+  color: #fff;
+}
+
+/* Contact form styling */
+/* Contact form styling */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  text-align: left;
+  position: relative;
+}
+
+#contact-form div {
+  margin-bottom:10px;
+}
+
+#contact-form label {
+  display: block;
+  font-weight: bold;
+  color: #000000;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e8e1e1;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+  background-color: #e0e0e0;
+}
+
+#contact-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #6e6e6e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.contact-form-success {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+
+/* Rest of your CSS styles */
+/* Footer styling */
+footer {
+  background-color: #333;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
