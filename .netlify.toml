@@ -1,8 +1,0 @@
-[build]
-  command = "npm run start"  # Use the appropriate build command
-  publish = "nigel-portfolio/public"  # Specify the path to the directory containing your static files
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
