@@ -1,43 +1,45 @@
 // Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
+$(document).ready(function() {
+  $('a[href^="#"]').on('click', function(event) {
+    event.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+    }
   });
 });
-
 // Dynamic content loading
-const projectsContainer = document.querySelector('#projects .projects-container');
-
-const projects = [
-  {
-    title: 'Project 1',
-    description: 'Description of Project 1.'
-  },
-  {
-    title: 'Project 2',
-    description: 'Description of Project 2.'
-  },
-  {
-    title: 'Project 3',
-    description: 'Description of Project 3.'
-  }
-];
-
-projects.forEach(project => {
-  const projectElement = document.createElement('div');
-  projectElement.classList.add('project');
-  projectElement.innerHTML = `
-    <h3>${project.title}</h3>
-    <p>${project.description}</p>
-  `;
-  projectsContainer.appendChild(projectElement);
-});
-
 document.addEventListener('DOMContentLoaded', function () {
+  const projectsContainer = document.querySelector('#projects .projects-container');
+
+  const projects = [
+    {
+      title: 'Project 1',
+      description: 'Description of Project 1.'
+    },
+    {
+      title: 'Project 2',
+      description: 'Description of Project 2.'
+    },
+    {
+      title: 'Project 3',
+      description: 'Description of Project 3.'
+    }
+  ];
+
+  projects.forEach(project => {
+    const projectElement = document.createElement('div');
+    projectElement.classList.add('project');
+    projectElement.innerHTML = `
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+    `;
+    projectsContainer.appendChild(projectElement);
+  });
+
   const form = document.querySelector('#contact-form');
   const errorElement = document.querySelector('.error-message');
   const successMessage = document.createElement('div');
