@@ -9,9 +9,8 @@ header {
   background-color: transparent;
 }
 body {
-  background: linear-gradient(to bottom, #ff00cc, #3333ff);
-}
-
+  background: linear-gradient(to bottom, #00aaff, #ff66cc);
+  }
 
 .logo {
   display: flex;
