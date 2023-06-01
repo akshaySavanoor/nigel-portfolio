@@ -28,6 +28,28 @@ body {
 .yellow-letter {
   color: yellow;
 }
+ 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  display: none;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-message {
+  margin: 0;
+}
+
 
 nav ul {
   list-style: none;
