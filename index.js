@@ -1,18 +1,21 @@
 // Smooth scrolling
-$(document).ready(function() {
-  $('a[href^="#"]').on('click', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
 
-    var target = $(this.getAttribute('href'));
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top
-      }, 1000);
-    }
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 });
+
 // Dynamic content loading
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const projectsContainer = document.querySelector('#projects .projects-container');
 
   const projects = [
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   successMessage.classList.add('popup');
   successMessage.textContent = 'Message sent successfully!';
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const nameInput = document.querySelector('#name');
@@ -74,29 +77,32 @@ document.addEventListener('DOMContentLoaded', function () {
     formData.append('email', emailInput.value.trim());
     formData.append('message', messageInput.value.trim());
 
-    // Send the form data using AJAX
-    $.ajax({
-      url: form.getAttribute('action'),
+    // Send the form data using Fetch API
+    fetch(form.getAttribute('action'), {
       method: 'POST',
-      data: formData,
-      dataType: 'json',
-      success: function () {
-        // Show success message pop-up
-        document.body.appendChild(successMessage);
+      body: formData
+    })
+      .then(response => {
+        if (response.status === 200) {
+          // Show success message pop-up
+          document.body.appendChild(successMessage);
 
-        // Remove success message after a few seconds
-        setTimeout(() => {
-          successMessage.remove();
-        }, 3000);
+          // Remove success message after a few seconds
+          setTimeout(() => {
+            successMessage.remove();
+          }, 3000);
 
-        // Reset the form after successful submission
-        form.reset();
-      },
-      error: function () {
-        showError('An error occurred. Please try again later.');
-      }
-    });
+          // Reset the form after successful submission
+          form.reset();
+        } else {
+          showError('An error occurred. Please try again later.');
+        }
+      })
+      .catch(() => {
+        showError('Mail sent successfully!');
+      });
   });
+
 
   function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
