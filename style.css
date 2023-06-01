@@ -2,10 +2,11 @@
 
 /* Header styling */
 header {
+  font-size:large;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: transparent;
 }
 body {
@@ -21,11 +22,12 @@ body {
   font-size: 24px;
   color: #fff;
   font-weight: bold;
+  font-size: 50px;
   margin: 0;
 }
 
 .yellow-letter {
-  color: yellow;
+  color: rgb(255, 251, 1);
 }
  
 .popup {
@@ -135,7 +137,7 @@ nav ul li a:hover::after {
 /* Home section styling */
 #home {
   text-align: left;
-  padding: 100px;
+  padding: 50px;
 }
 
 .home-container h2,
@@ -148,10 +150,10 @@ nav ul li a:hover::after {
 #contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   background-color: #ffffff;
-  padding: 40px;
+  padding: 50px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   text-align: left;
@@ -220,17 +222,17 @@ nav ul li a:hover::after {
 /* Rest of your CSS styles */
 /* Footer styling */
 footer {
-  background-color: #333;
+  background-color: transparent;
   padding: 20px 0;
-  color: #fff;
+  color: #ffffff;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   text-align: center;
 }
 
 footer p {
-  margin: 0;
+  margin: auto;
 }
